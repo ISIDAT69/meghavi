@@ -20,22 +20,24 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .welcome-logo {
-    width: 120px;
-    height: 120px;
-    margin-bottom: 1.2rem;
-    border-radius: 18px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.13);
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.09);
     background: #fff;
     object-fit: contain;
 }
 #welcomeOverlay .welcome-text {
     color: #fff;
-    font-size: 2.4rem;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 2px;
     text-shadow: 0 2px 16px rgba(0,0,0,0.15);
+    text-align: center;
     animation: welcomePop 1.1s cubic-bezier(.68,-0.55,.27,1.55);
 }
 #welcomeOverlay.hide {
@@ -91,19 +93,19 @@ body {
     }
 }
 
-/* SLIDER SECTION - Video height increased */
+/* SLIDER SECTION - Video old size */
 #videoCarousel .carousel-item video {
-    height: 540px;
+    height: 320px;
     object-fit: cover;
 }
 @media (max-width: 991px) {
     #videoCarousel .carousel-item video {
-        height: 1000px;
+        height: 200px;
     }
 }
 @media (min-width: 1200px) {
     #videoCarousel .carousel-item video {
-        height: 640px;
+        height: 400px;
     }
 }
 
