@@ -14,17 +14,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
-    <!-- Loader Animation -->
-    <div id="loader">
-        <div class="spinner"></div>
-        <span class="loader-text">Loading Meghavi...</span>
+    <!-- Welcome Overlay -->
+    <div id="welcomeOverlay">
+        <div class="welcome-text">
+            Welcome to Meghavi Restaurant
+        </div>
     </div>
 
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top" data-aos="fade-down">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="logo.jpg" alt="Meghavi Logo" width="50" height="50" class="me-2" data-aos="zoom-in">
+                <img src="logo.jpg" alt="Meghavi Logo">
                 <span>Meghavi Restaurant</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -42,34 +43,34 @@
 
     <!-- Slider Section -->
     <section id="slider" class="mb-5">
-        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2200">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-aos="fade-in">
+                <div class="carousel-item active" data-bs-interval="2200">
                     <video class="d-block w-100" src="vid1.mp4" autoplay loop muted></video>
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 data-aos="fade-up" data-aos-delay="100">Welcome to Meghavi Restaurant</h2>
-                        <p data-aos="fade-up" data-aos-delay="250">Authentic Punjabi & Fusion Delights</p>
+                        <h2 class="caption-animate">Welcome to Meghavi Restaurant</h2>
+                        <p class="caption-animate">Authentic Punjabi & Fusion Delights</p>
                     </div>
                 </div>
-                <div class="carousel-item" data-aos="fade-in">
+                <div class="carousel-item" data-bs-interval="2100">
                     <video class="d-block w-100" src="vid2.mp4" autoplay loop muted></video>
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 data-aos="fade-up" data-aos-delay="100">Fresh. Tasty. Hygienic.</h2>
-                        <p data-aos="fade-up" data-aos-delay="250">Enjoy the Best Paneer Dishes in Town</p>
+                        <h2 class="caption-animate">Fresh. Tasty. Hygienic.</h2>
+                        <p class="caption-animate">Enjoy the Best Paneer Dishes in Town</p>
                     </div>
                 </div>
-                <div class="carousel-item" data-aos="fade-in">
+                <div class="carousel-item" data-bs-interval="2000">
                     <video class="d-block w-100" src="vid3.mp4" autoplay loop muted></video>
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 data-aos="fade-up" data-aos-delay="100">Fresh. Tasty. Hygienic.</h2>
-                        <p data-aos="fade-up" data-aos-delay="250">Enjoy the Best Paneer Dishes in Town</p>
+                        <h2 class="caption-animate">Fresh. Tasty. Hygienic.</h2>
+                        <p class="caption-animate">Enjoy the Best Paneer Dishes in Town</p>
                     </div>
                 </div>
-                <div class="carousel-item" data-aos="fade-in">
+                <div class="carousel-item" data-bs-interval="2000">
                     <video class="d-block w-100" src="vid4.mp4" autoplay loop muted></video>
                     <div class="carousel-caption d-none d-md-block">
-                        <h2 data-aos="fade-up" data-aos-delay="100">Fresh. Tasty. Hygienic.</h2>
-                        <p data-aos="fade-up" data-aos-delay="250">Enjoy the Best Paneer Dishes in Town</p>
+                        <h2 class="caption-animate">Fresh. Tasty. Hygienic.</h2>
+                        <p class="caption-animate">Enjoy the Best Paneer Dishes in Town</p>
                     </div>
                 </div>
             </div>
@@ -237,11 +238,11 @@
     <!-- Footer -->
     <footer class="bg-dark text-light text-center py-3" data-aos="fade-up">
         <div>
-            <img src="logo.jpg" width="30" class="me-1" alt="Logo"> Meghavi Restaurant &copy; 2025 | Designed by Meghavi Web Team
+            <img src="logo.png" width="30" class="me-1" alt="Logo"> Meghavi Restaurant &copy; 2025 | Designed by Meghavi Web Team
         </div>
         <div class="social-icons mt-2">
             <a href="#" class="text-light me-2"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/meghavi_restaurant?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
             <a href="#" class="text-light me-2"><i class="fab fa-whatsapp"></i></a>
         </div>
     </footer>
@@ -253,9 +254,11 @@
     <!-- Custom JS -->
     <script src="menu.js"></script>
     <script>
-        // Loader fadeout
-        window.addEventListener('load', function() {
-            document.getElementById('loader').classList.add('hide');
+        // Welcome overlay fade out
+        window.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('welcomeOverlay').classList.add('hide');
+            }, 1500);
         });
         // Init AOS
         AOS.init({
