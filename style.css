@@ -51,6 +51,24 @@ body {
     100% { transform: scale(1); opacity: 1; }
 }
 
+/* Responsive Welcome Overlay Logo + Text for Mobile */
+@media (max-width: 767px) {
+    #welcomeOverlay .welcome-content {
+        align-items: center;
+        justify-content: center;
+    }
+    .welcome-logo {
+        width: 38px;
+        height: 38px;
+        margin-bottom: 0.7rem;
+        border-radius: 8px;
+    }
+    #welcomeOverlay .welcome-text {
+        font-size: 1.15rem;
+        padding: 0 0.5rem;
+    }
+}
+
 /* NAVBAR - Responsive tweaks */
 .navbar {
     min-height: 56px;
@@ -93,19 +111,19 @@ body {
     }
 }
 
-/* SLIDER SECTION - Video old size */
+/* SLIDER SECTION - Increased Video Height */
 #videoCarousel .carousel-item video {
-    height: 320px;
+    height: 460px;
     object-fit: cover;
 }
 @media (max-width: 991px) {
     #videoCarousel .carousel-item video {
-        height: 200px;
+        height: 260px;
     }
 }
 @media (min-width: 1200px) {
     #videoCarousel .carousel-item video {
-        height: 400px;
+        height: 520px;
     }
 }
 
