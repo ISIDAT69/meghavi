@@ -64,7 +64,7 @@ body {
 #menu h2 {
     font-family: 'Merriweather', serif;
     color: #b22222;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     font-weight: 700;
 }
 
@@ -86,7 +86,7 @@ body {
 .table thead th {
     background: #b22222 !important;
     color: #fff;
-    font-size: 1.1rem;
+    font-size: 1rem;
     letter-spacing: 0.5px;
 }
 .table tbody tr {
@@ -125,7 +125,7 @@ footer img {
         padding: 0.5rem 1rem;
     }
     #menu h2 {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 }
 
